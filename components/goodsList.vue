@@ -40,7 +40,7 @@
 		@include Center;
 		flex-wrap: wrap;
 		justify-content: left;
-		margin-top: 10rpx;
+		// margin-top: 10rpx;
 
 		.goods-item {
 			flex: 0 0 45%;
@@ -86,12 +86,15 @@
 				box-sizing: border-box;
 				flex: 2;
 				width: 100%;
-				padding: 0 10rpx 10rpx 10rpx;
+				padding: 0 10rpx 0 10rpx;
 				display: -webkit-box;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 3;
+				 margin-bottom: 10rpx;
+				// margin-left: 10rpx;
+				//margin-right: 10rpx;
 			}
 		}
 	}

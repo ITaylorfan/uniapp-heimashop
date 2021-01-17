@@ -38,7 +38,7 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "商品列表",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": true
             }
             
         }
