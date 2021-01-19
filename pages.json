@@ -46,7 +46,7 @@
             "path" : "pages/contactUs/contactUs",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "联系我们",
                 "enablePullDownRefresh": false
             }
             
@@ -55,7 +55,7 @@
             "path" : "pages/comunityImages/comunityImages",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "社区图片",
                 "enablePullDownRefresh": false
             }
             
@@ -74,7 +74,7 @@
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "商城",
 		"navigationBarBackgroundColor": "#BA1500",
-		"backgroundColor": "#aa55ff"   //下拉显示出来的窗口的背景色
+		"backgroundColor": "#EEEEEE"   //下拉显示出来的窗口的背景色
 	},
 	"condition" : { //模式配置，仅开发期间生效
 		"current": 0, //当前激活的模式(list 的索引项)

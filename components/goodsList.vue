@@ -90,11 +90,14 @@
 				display: -webkit-box;
 				overflow: hidden;
 				text-overflow: ellipsis;
+				// overflow: hidden;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 3;
-				 margin-bottom: 10rpx;
+				padding-bottom: 10rpx;
+				 // margin-bottom: 10rpx;
 				// margin-left: 10rpx;
 				//margin-right: 10rpx;
+				// vertical-align: top;
 			}
 		}
 	}
