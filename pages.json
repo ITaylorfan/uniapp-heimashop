@@ -69,6 +69,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/newsDetail/newsDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "咨询详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

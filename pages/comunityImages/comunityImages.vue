@@ -7,9 +7,9 @@
 		
 		<scroll-view scroll-y="true" class="right">
 			<view class="right-item" v-for="(item,index) in rightData" :key="item.id">
-				<view class="image-box">
-				<!-- <image src="http://itaylorfan.top:8081/TS/TS12-30-2.jpg"></image> -->
-				<image :src="item.img_url" @error="imageError(index)"></image>
+				<view class="image-box" @click="prevImage(item.img_url)">
+					<!-- <image src="http://itaylorfan.top:8081/TS/TS12-30-2.jpg"></image> -->
+					<image :src="item.img_url" @error="imageError(index)"></image>
 				</view>
 				<view class="title">{{item.title}}</view>
 			</view>
@@ -52,10 +52,27 @@
 			},
 			//处理图片加载错误
 			imageError(index){
-				console.log(index)
+				//console.log(index)
 				//console.log(e)
 				this.rightData[index].img_url="http://itaylorfan.top:8081/TS/TS12-30-2.jpg"
 				console.log("图片出错了")
+			},
+			//预览图片
+			prevImage(url){
+				let myData=[
+					"http://itaylorfan.top:8081/TS/TS12-30.jpg",
+					"http://itaylorfan.top:8081/TS/TS12-8.jpg",
+					"http://itaylorfan.top:8081/TS/TS5.21-1.jpg",
+					"http://itaylorfan.top:8081/TS/TS5.21-2.jpg",
+					"http://itaylorfan.top:8081/TS/TSpink.jpg"
+				]
+				let urlData=[
+					url,
+					...myData	
+				]
+				uni.previewImage({
+					urls:urlData
+				})
 			}
 		},
 		onLoad() {
@@ -102,12 +119,14 @@
 				box-sizing: border-box;
 				width: 100%;
 				@include ColumnTopLeft;
+				
 				.image-box{
 					flex: 1;
-					width: 550rpx;
+					width: 550rpx;									
 					image{
 						width:100%;
 						height: 500rpx;
+						border-radius: 10rpx;
 					}
 				}	
 				.title{
