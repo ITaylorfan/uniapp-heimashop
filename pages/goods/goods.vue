@@ -1,6 +1,6 @@
 <template>
 	<view class="container">
-		<GoodsList :goods="goods"></GoodsList>
+		<GoodsList :goods="goods"  @navigateToDetail="handleNavigateToDetail"></GoodsList>
 		<view class="bottom-line" v-if="isBottom">-----我也是有底线的-----</view>
 	</view>
 </template>
@@ -38,6 +38,13 @@
 				//或者
 				// console.log(callback)
 				callback && callback()
+				
+			},
+			//商品详情跳转
+			handleNavigateToDetail(id){
+				uni.navigateTo({
+					url:"/pages/goodsDetail/goodsDetail?id="+id
+				})
 				
 			}
 		},

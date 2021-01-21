@@ -1,6 +1,6 @@
 <template>
 	<view class="goods-container">
-		<view class="goods-item" v-for="(item,index) in goods" :key="item.id">
+		<view class="goods-item" v-for="(item,index) in goods" :key="item.id" @click="navigate(item.id)">
 			<view class="image-box">
 				<!-- <image :src="item.img_url?item.img_url:'http://itaylorfan.top:8081/TS/TS12-30-2.jpg'"></image> -->
 				<image src="http://itaylorfan.top:8081/TS/TS12-30-2.jpg"></image>
@@ -28,6 +28,11 @@
 				type: Array,
 				default: []
 			},
+		},
+		methods:{
+			navigate(id){
+				this.$emit("navigateToDetail",id)
+			}
 		}
 	}
 </script>

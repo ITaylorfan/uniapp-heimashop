@@ -9,6 +9,7 @@
 					{{item.title}}
 				</view>
 				<view class="bottom-text">
+					<!-- 在此处使用过滤器 -->
 					<view class="time">发表时间：{{item.add_time | timeFilter}}</view>
 					<view class="num">浏览次数：{{item.click}}</view>
 				</view>
@@ -44,20 +45,20 @@
 				console.log("图片出错了")
 			}
 		},
-		//自定义过滤器
-		filters:{
-			timeFilter(myDate){
-				const date=new Date(myDate)
-				let year=date.getFullYear()
-				let month=(date.getMonth()+1).toString().padStart(2,0)
-				//padStart() ES2017新增方法 对字符串进行填充
-				let Day=date.getDate().toString().padStart(2,0)
-				let Hour=date.getHours().toString().padStart(2,0)
-				let Min=date.getMinutes().toString().padStart(2,0)
-				let Second=date.getSeconds().toString().padStart(2,0)
-				return year+"-"+month+"-"+Day+" "+Hour+":"+Min+":"+Second
-			}
-		}
+		//自定义过滤器 此处已使用全局过滤器代替
+		// filters:{
+		// 	timeFilter:(myDate)=>{
+		// 		const date=new Date(myDate)
+		// 		let year=date.getFullYear()
+		// 		let month=(date.getMonth()+1).toString().padStart(2,0)
+		// 		//padStart() ES2017新增方法 对字符串进行填充
+		// 		let Day=date.getDate().toString().padStart(2,0)
+		// 		let Hour=date.getHours().toString().padStart(2,0)
+		// 		let Min=date.getMinutes().toString().padStart(2,0)
+		// 		let Second=date.getSeconds().toString().padStart(2,0)
+		// 		return year+"-"+month+"-"+Day+" "+Hour+":"+Min+":"+Second
+		// 	}
+		// }
 	}
 </script>
 

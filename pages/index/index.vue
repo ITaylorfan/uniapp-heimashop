@@ -22,7 +22,7 @@
 			<view class="hot-title">
 				推荐商品
 			</view>
-			<GoodsList :goods="goods"></GoodsList>
+			<GoodsList :goods="goods" @navigateToDetail="handleNavigateToDetail"></GoodsList>
 		</view>
 	</view>
 </template>
@@ -89,11 +89,19 @@
 				//console.log(res)
 				this.goods=res.data.message
 			},
+			//中间导航栏跳转
 			navigateTo(url){
 				//console.log(url)
 				uni.navigateTo({
 					url
 				})
+			},
+			//商品详情跳转
+			handleNavigateToDetail(id){
+				uni.navigateTo({
+					url:"/pages/goodsDetail/goodsDetail?id="+id
+				})
+				
 			}
 
 			
