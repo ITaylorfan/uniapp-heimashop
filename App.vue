@@ -18,4 +18,11 @@
 	view{
 		box-sizing: border-box;
 	}
+	
+	//重置富文本样式
+	.gomeImgLoad{
+		width: 740rpx;
+		height: auto;
+	}
+	
 </style>

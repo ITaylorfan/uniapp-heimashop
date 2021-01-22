@@ -7,7 +7,9 @@
     "pages/goods/goods",
     "pages/contactUs/contactUs",
     "pages/comunityImages/comunityImages",
-    "pages/studyVideo/studyVideo"
+    "pages/studyVideo/studyVideo",
+    "pages/newsDetail/newsDetail",
+    "pages/goodsDetail/goodsDetail"
   ],
   "subPackages": [],
   "window": {
@@ -45,5 +47,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap76.json"
 }

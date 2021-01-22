@@ -55,4 +55,8 @@
 view {
   box-sizing: border-box;
 }
+.gomeImgLoad {
+  width: 740rpx;
+  height: auto;
+}
 

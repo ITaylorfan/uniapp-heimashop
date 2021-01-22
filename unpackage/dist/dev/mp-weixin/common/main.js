@@ -13,6 +13,18 @@ var _index = __webpack_require__(/*! ./Request/index.js */ 11);function _interop
 
 _vue.default.config.productionTip = false;
 _vue.default.prototype.$Request = _index.Request;
+_vue.default.filter("timeFilter", function (myDate) {
+  var date = new Date(myDate);
+  var year = date.getFullYear();
+  var month = (date.getMonth() + 1).toString().padStart(2, 0);
+  //padStart() ES2017新增方法 对字符串进行填充
+  var Day = date.getDate().toString().padStart(2, 0);
+  var Hour = date.getHours().toString().padStart(2, 0);
+  var Min = date.getMinutes().toString().padStart(2, 0);
+  var Second = date.getSeconds().toString().padStart(2, 0);
+  return year + "-" + month + "-" + Day + " " + Hour + ":" + Min + ":" + Second;
+});
+
 
 _App.default.mpType = 'app';
 

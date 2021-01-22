@@ -128,20 +128,44 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 18));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var NewsItem = function NewsItem() {__webpack_require__.e(/*! require.ensure | components/newsItem */ "components/newsItem").then((function () {return resolve(__webpack_require__(/*! ../../components/newsItem.vue */ 94));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
 {
   data: function data() {
-    return {};
-
+    return {
+      time: "2020-1-20 21:00:00",
+      num: 100,
+      news: [] };
 
   },
-  methods: {} };exports.default = _default;
+  components: {
+    NewsItem: NewsItem },
+
+  methods: {
+    getNewsList: function getNewsList() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  _this.$Request({ url: "/api/getnewslist" }));case 2:res = _context.sent;
+                //console.log(res)
+                _this.news = res.data.message;case 4:case "end":return _context.stop();}}}, _callee);}))();
+    },
+    //跳转方法
+    handleGoDetail: function handleGoDetail(id) {
+      uni.navigateTo({
+        url: "/pages/newsDetail/newsDetail?id=" + id });
+
+    } },
+
+
+  onLoad: function onLoad() {
+    this.getNewsList();
+  } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 
